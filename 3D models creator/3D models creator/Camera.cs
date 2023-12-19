@@ -33,8 +33,8 @@ namespace _3D_models_creator
                     double deltaZ = point.Z - Point.Z;
                     double TanX = deltaX / deltaZ;
                     double TanY = deltaY / deltaZ;
-                    double RadX = Math.Atan(TanX);
-                    double RadY = Math.Atan(TanY);
+                    double RadX = Math.Atan(TanX) - RotationX;
+                    double RadY = Math.Atan(TanY) - RotationY;
                     bool InFieldOfView = (RadX >= 0 && RadX <= FieldOfViewX) && (RadY >= 0 && RadY <= FieldOfViewY);
                     res.Add(new Point2D(ResolutionX * (RadX / FieldOfViewX), ResolutionY * (RadY / FieldOfViewY)));
                 }

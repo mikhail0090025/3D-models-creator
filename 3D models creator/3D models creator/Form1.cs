@@ -50,7 +50,11 @@ namespace _3D_models_creator
 
         private void panel_3d_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right) RightMouseButtonIsDown = false;
+            if (e.Button == MouseButtons.Right)
+            {
+                RightMouseButtonIsDown = false;
+                MessageBox.Show($"Test {Camera.RotationX}");
+            }
         }
 
         private void panel_3d_MouseDown(object sender, MouseEventArgs e)
@@ -60,7 +64,10 @@ namespace _3D_models_creator
 
         private void panel_3d_MouseMove(object sender, MouseEventArgs e)
         {
-            
+            if (RightMouseButtonIsDown)
+            {
+                Camera.RotationX += e.X;
+            }
         }
         private void panel_3d_Paint(object sender, PaintEventArgs e)
         {
