@@ -21,9 +21,24 @@ namespace _3D_models_creator
             RotationY = roty;
             RotationZ = rotz;
         }
-        public List<List<bool>> GetImageOfPoints()
+        public List<Point2D> GetImageOfPoints(List<Figure> figures, int ResolutionX, int ResolutionY)
         {
-
+            foreach (var fig in figures)
+            {
+                foreach (var point in fig.Points)
+                {
+                    
+                }
+            }
+        }
+    }
+    struct Point2D
+    {
+        public double X;
+        public double Y;
+        public Point2D(double x, double y)
+        {
+            X = x; Y = y;
         }
     }
 }
