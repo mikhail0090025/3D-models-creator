@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3D_models_creator
 {
-    class Camera
+    public class Camera
     {
         public Point Point;
         public double RotationX;
@@ -23,16 +23,26 @@ namespace _3D_models_creator
         }
         public List<Point2D> GetImageOfPoints(List<Figure> figures, int ResolutionX, int ResolutionY)
         {
+            var res = new List<Point2D>();
             foreach (var fig in figures)
             {
                 foreach (var point in fig.Points)
                 {
-                    
+                    double deltaX = point.X - Point.X;
+                    double deltaY = point.Y - Point.Y;
+                    double deltaZ = point.Z - Point.Z;
+                    double TanX = deltaX / deltaZ;
+                    double TanY = deltaY / deltaZ;
+                    double RadX = Math.Atan(TanX);
+                    double RadY = Math.Atan(TanY);
+                    bool InFieldOfView = (RadX >= 0 && RadX <= FieldOfViewX) && (RadY >= 0 && RadY <= FieldOfViewY);
+                    res.Add(new Point2D(ResolutionX * (RadX / FieldOfViewX), ResolutionY * (RadY / FieldOfViewY)));
                 }
             }
+            return res;
         }
     }
-    struct Point2D
+    public struct Point2D
     {
         public double X;
         public double Y;

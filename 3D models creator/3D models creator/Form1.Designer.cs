@@ -125,19 +125,19 @@
             // cubeToolStripMenuItem
             // 
             this.cubeToolStripMenuItem.Name = "cubeToolStripMenuItem";
-            this.cubeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cubeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cubeToolStripMenuItem.Text = "Cube";
             // 
             // planeToolStripMenuItem
             // 
             this.planeToolStripMenuItem.Name = "planeToolStripMenuItem";
-            this.planeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.planeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.planeToolStripMenuItem.Text = "Plane";
             // 
             // pyramideToolStripMenuItem
             // 
             this.pyramideToolStripMenuItem.Name = "pyramideToolStripMenuItem";
-            this.pyramideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pyramideToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.pyramideToolStripMenuItem.Text = "Pyramide";
             // 
             // panel_3d
@@ -147,6 +147,7 @@
             this.panel_3d.Name = "panel_3d";
             this.panel_3d.Size = new System.Drawing.Size(655, 421);
             this.panel_3d.TabIndex = 2;
+            this.panel_3d.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_3d_Paint);
             this.panel_3d.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_3d_MouseDown);
             this.panel_3d.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_3d_MouseMove);
             this.panel_3d.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_3d_MouseUp);
@@ -159,10 +160,10 @@
             this.Controls.Add(this.panel_3d);
             this.Controls.Add(this.panel_objects);
             this.Controls.Add(this.MainMenuStrip);
-            this.MainMenuStrip = this.MainMenuStrip;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3D models creator";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
             this.panel_objects.ResumeLayout(false);

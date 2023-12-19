@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3D_models_creator
 {
-    class Figure
+    public class Figure
     {
         public List<Point> Points { get; private set; }
         public List<Polygon> Polygons { get; private set; }
@@ -18,6 +18,10 @@ namespace _3D_models_creator
         public void AddPoint(Point p)
         {
             Points.Add(p);
+        }
+        public void AddPoint(params Point[] points)
+        {
+            Points.AddRange(points);
         }
         public void AddPolygon(Point p1, Point p2, Point p3)
         {

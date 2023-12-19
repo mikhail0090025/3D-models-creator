@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3D_models_creator
 {
-    class Point
+    public class Point
     {
         public double X;
         public double Y;

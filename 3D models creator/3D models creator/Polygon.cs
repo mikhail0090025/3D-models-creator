@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3D_models_creator
 {
-    class Polygon
+    public class Polygon
     {
         public Point Point1;
         public Point Point2;

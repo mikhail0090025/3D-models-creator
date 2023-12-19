@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3D_models_creator
 {
-    class ProjectClass
+    public class ProjectClass
     {
         public DateTime CreationDate;
         public string Name;
