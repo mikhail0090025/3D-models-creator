@@ -41,6 +41,7 @@
             this.planeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pyramideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_3d = new System.Windows.Forms.Panel();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.panel_objects.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -62,7 +63,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
-            this.openobjFileToolStripMenuItem});
+            this.openobjFileToolStripMenuItem,
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -70,14 +72,14 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New...";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openobjFileToolStripMenuItem
             // 
             this.openobjFileToolStripMenuItem.Name = "openobjFileToolStripMenuItem";
-            this.openobjFileToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.openobjFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openobjFileToolStripMenuItem.Text = "Open .obj file";
             // 
             // settingsToolStripMenuItem
@@ -152,6 +154,13 @@
             this.panel_3d.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_3d_MouseMove);
             this.panel_3d.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_3d_MouseUp);
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +199,7 @@
         private System.Windows.Forms.ToolStripMenuItem planeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pyramideToolStripMenuItem;
         private System.Windows.Forms.Panel panel_3d;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
     }
 }
 

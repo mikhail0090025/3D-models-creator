@@ -105,5 +105,10 @@ namespace _3D_models_creator
             }
             panel_3d.Invalidate();
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
